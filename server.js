@@ -4,7 +4,7 @@ import connectDB from './DBconnection/index.mjs'
 import applyRoutes from './routes/index.js'
 const app = new App()
 // configureExpressApp(app)
-const PORT = 3005
+const PORT = process.env.PORT || 3005
 
 const startServer = () => {
     Promise.all([connectDB()]).then(()=>{
